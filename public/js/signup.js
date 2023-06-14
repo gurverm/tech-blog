@@ -29,7 +29,7 @@ async function signup(e) {
       }
     } else {
       alert(
-        'Could not create account! Choose a different username and try again.'
+        'This user exists! Try again with another username'
       );
     }
   } catch (err) {
