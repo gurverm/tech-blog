@@ -5,7 +5,7 @@ const loginSignupRouter = require('./loginSignup.js');
 
 
 viewsRouter.use(homeRouter);
-viewsRouter.use('./dashboard', dashboardRouter);
+viewsRouter.use('/dashboard', dashboardRouter);
 viewsRouter.use(loginSignupRouter);
 
 

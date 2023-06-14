@@ -1,0 +1,10 @@
+<h1 class='h2'>Posts</h1>
+<div class='d-flex flex-column align-items-center container'>
+  {{#each posts as |post|}}
+    {{#with post}}
+      {{>post}}
+    {{/with}}
+  {{/each}}
+</div>
+
+{{!-- <script src='/js/post.js'></script> --}}
