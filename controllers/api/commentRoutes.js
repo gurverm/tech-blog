@@ -5,8 +5,8 @@ commentRouter.post('/', async(req,res)=>{
     try{
         const comment = {
             body: req.body.body,
-            post_id: req.body.post_id,
-            user_id:req.session.user_id,
+            post_id: req.body.postId,
+            user_id:req.session.userId,
         };
         const newComment = await Comment.create(comment);
         res.json(newComment);

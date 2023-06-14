@@ -1,8 +1,8 @@
 const postRouter = require("express").Router();
 // const { Post, Comment } = require("../../models");
 
-const Comment = require("./Comment");
-const Post = require("./Post");
+const Comment = require("../../models/Comment");
+const Post = require("../../models/Post");
 
 postRouter.get("/", async (req, res) => {
   try {
@@ -21,18 +21,15 @@ postRouter.get("/", async (req, res) => {
 postRouter.post("/", async (req, res) => {
   try {
     const post = {
-        body: req.body.body,
+      body: req.body.body,
       user_id: req.session.userId,
-      title: req.body.title
-      
+      title: req.body.title,
     };
     const newPost = await Post.create(post);
     res.json(newPost);
   } catch (err) {
     console.error(err);
-    res
-      .status(500)
-      .json({ message: "Server error. Could not create post" });
+    res.status(500).json({ message: "Server error. Could not create post" });
   }
 });
 
@@ -44,9 +41,7 @@ postRouter.delete("/:id", async (req, res) => {
     res.status(204).end();
   } catch (err) {
     console.error(err);
-    res
-      .status(500)
-      .json({ message: "Server error. Could not delete post" });
+    res.status(500).json({ message: "Server error. Could not delete post" });
   }
 });
 
@@ -63,9 +58,7 @@ postRouter.put("/:id", async (req, res) => {
     res.status(204).end();
   } catch (err) {
     console.error(err);
-    res
-      .status(500)
-      .json({ message: "Server error. Could not update Post" });
+    res.status(500).json({ message: "Server error. Could not update Post" });
   }
 });
 
