@@ -1,5 +1,8 @@
 const postRouter = require("express").Router();
-const { Post, Comment } = require("../../models");
+// const { Post, Comment } = require("../../models");
+
+const Comment = require("./Comment");
+const Post = require("./Post");
 
 postRouter.get("/", async (req, res) => {
   try {
