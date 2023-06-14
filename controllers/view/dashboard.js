@@ -33,6 +33,8 @@ router.get('/', withAuth, async (req, res) => {
         [Comment, 'updatedAt', 'DESC'],],
     });
     const user = await userData.get({ plain: true });
+    // render to desired handlebars page 
+
     res.render('dashboard', { loggedIn: req.session.loggedIn, data: user });
   });
   

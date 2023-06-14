@@ -26,6 +26,8 @@ router.get('/', async (req, res) => {
     });
     const posts = rawPosts.map((rawPost) => {
       return rawPost.get({ plain: true });
+    // render to desired handlebars page 
+
     });res.render('home', { posts, loggedIn: req.session.loggedIn });
   });
   

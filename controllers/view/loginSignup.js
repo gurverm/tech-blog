@@ -4,6 +4,8 @@ router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/dashboard');
   } else {
+    // render to desired handlebars page 
+
     res.render('login', { disableBtn: true });
   }
 });
@@ -15,6 +17,8 @@ router.get('/signup', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/dashboard');
   } else {
+    // render to desired handlebars page 
+
     res.render('signup', { disableBtn: true });
   }
 });
