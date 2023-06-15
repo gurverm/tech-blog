@@ -1,106 +1,87 @@
 {{! Post body is no longer truncated }}
-<div class='d-flex flex-column align-items-center container'>
+<div class="d-flex flex-column align-items-center container">
   {{#if postOwner}}
-    <div class='d-flex justify-content-around col-6' id='edit-btn-group'>
-      <button class='btn btn-secondary border-success' id='edit-post-btn'>Edit
-        this post</button>
-      <button
-        class='btn btn-secondary border-danger'
-        id='delete-post-btn'
-      >Delete this post</button>
+    <div class="d-flex justify-content-around col-6" id="edit-btn-group">
+      <button class="btn btn-secondary" id="edit-post-btn">Edit this post</button>
+      <button class="btn btn-secondary" id="delete-post-btn">Delete this post</button>
     </div>
   {{/if}}
   <div
-    data-post-id='{{post.id}}'
-    class='container card col-7 m-1 border-info'
-    id='post'
-  >
+    data-post-id="{{post.id}}"
+    class="container card col-7 m-1 border-color:red border border-4"
+    id="post">
     <div
-      class='card-body d-flex flex-column justify-content-between align-items-center container'
+      class="card-body d-flex flex-column justify-content-between align-items-center container"
     >
-      <div class='d-flex justify-content-between container'>
-        <div class='d-flex flex-column'>
-          <h2 class='card-title h5'>{{post.title}}</h2>
-          <h3 class='card-subtitle text-muted h6'>{{post.user.username}}</h3>
-        </div>
-        <div class='d-flex flex-column align-items-end'>
-          <small class='text-sm text-muted'>Updated:
-            {{formatTimestamp post.updatedAt}}</small>
-          <small class='font-italic text-muted'>Created:
-            {{formatTimestamp post.createdAt}}</small>
+      <div class="d-flex justify-content-between container">
+        <div class="d-flex flex-column">
+          <h2 class="card-title h5">{{post.title}}</h2>
+          <h3 class="card-subtitle text-muted h6">{{post.user.username}}</h3>
         </div>
       </div>
-      <p class='card-text m-3'>{{post.body}}</p>
-      <form id='edit-post-form' class='d-flex flex-column col-10 d-none'>
-        <div class='form-group my-2'>
-          <label for='edit-post-title' class='text-muted'>Edit post</label>
+      <p class="card-text m-3">{{post.body}}</p>
+      <form id="edit-post-form" class="d-flex flex-column col-10 d-none">
+        <div class="form-group my-2">
+          <label for="edit-post-title" class="text-muted">Edit post</label>
           <input
-            type='text'
-            class='form-control'
-            id='edit-post-title'
-            placeholder='Title'
+            type="text"
+            class="form-control"
+            id="edit-post-title"
+            placeholder="Title"
             required
           />
         </div>
-        <div class='form-group my-2'>
+        <div class="form-group my-2">
           <textarea
-            class='form-control'
-            id='edit-post-body'
-            rows='6'
-            placeholder='Type your updated post here'
+            class="form-control"
+            id="edit-post-body"
+            rows="6"
+            placeholder="Type your updated post here"
             required
           ></textarea>
         </div>
-        <button type='submit' class='btn btn-secondary my-2'>Republish post</button>
+        <button type="submit" class="btn btn-secondary my-2">Republish post</button>
       </form>
       <div
-        id='comments-container'
-        class='col-12 d-flex flex-column justify-content-center'
-      >
+        id="comments-container"
+        class="col-12 d-flex flex-column justify-content-center">
         {{#each post.comments as |comment|}}
-          <div data-post-id='{{post.id}}' class='container card m-1'>
+          <div data-post-id="{{post.id}}" class="container card m-1">
             <div
-              class='card-body d-flex flex-column justify-content-between container'
+              class="card-body d-flex flex-column justify-content-between container"
             >
-              <div class='d-flex justify-content-between container'>
-                <div class='d-flex flex-column'>
-                  <h2 class='card-title h5'>{{comment.title}}</h2>
+              <div class="d-flex justify-content-between container">
+                <div class="d-flex flex-column">
+                  <h2 class="card-title h5">{{comment.title}}</h2>
                   <h3
-                    class='card-subtitle text-muted h6'
+                    class="card-subtitle text-muted h6"
                   >{{comment.user.username}}</h3>
                 </div>
-                <div class='d-flex flex-column align-items-end'>
-                  <small class='text-sm text-muted'>Updated:
-                    {{formatTimestamp comment.updatedAt}}</small>
-                  <small class='font-italic text-muted'>Created:
-                    {{formatTimestamp comment.createdAt}}</small>
-                </div>
+
               </div>
-              <p class='card-text m-3'>{{comment.body}}</p>
+              <p class="card-text m-3">{{comment.body}}</p>
             </div>
           </div>
         {{/each}}
-        <button class='btn btn-secondary my-4' id='new-comment-btn'>Write a new
+        <button class="btn btn-secondary my-4" id="new-comment-btn">Write a new
           comment</button>
-
         <form
-          id='new-comment-form'
-          class='d-flex flex-column d-none col-11 border-success card p-3 m-2'
-        >
-          <div class='form-group my-2'>
-            <label for='post-title' class='text-muted'>New comment</label>
+          id="new-comment-form"
+          class="d-flex flex-column d-none col-11 border-success card p-3 m-2">
+          <div class="form-group my-2">
+            <label for="post-title" class="text-muted">New comment</label>
             <textarea
-              class='form-control'
-              id='comment-body'
-              rows='6'
-              placeholder='Type your comment here'
+              class="form-control"
+              id="comment-body"
+              rows="6"
+              placeholder="Type your comment here"
               required
             ></textarea>
           </div>
-          <button type='submit' class='btn btn-secondary my-2'>Publish comment</button>
+          <button type="submit" class="btn btn-secondary my-2">Publish comment</button>
         </form>
       </div>
     </div>
   </div>
 </div>
-<script src='../js/edit-post.js'></script>
+<script src="../js/editPost.js"></script>
