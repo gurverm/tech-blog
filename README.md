@@ -14,7 +14,8 @@ This application is created through handlebars.js, express.js, mysql, and node.j
 ## Installation
 Visit the deployed application: 
 
-If you want to run it locally clone this repository. Then sign into mysql through the terminal and run 'source db/schema.db', to create the database. Next run 'npm install'. Lastly, run 'npm start' to get the application running on your localhost browser
+If you want to run it locally clone this repository. Then sign into mysql through the terminal and run 'source db/schema.db', to create the database. Next run 'npm install'. Lastly, run 'npm start' to get the application running on your localhost browser.
+Now that the application is ready to go, create an account and happy blogging!
 
 ## Usage
 
