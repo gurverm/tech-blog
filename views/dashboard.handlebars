@@ -1,7 +1,7 @@
 <h2 class='mb-5'>{{data.username}}</h2>
 <div class='d-flex flex-column align-items-center container'>
   {{#if data.posts}}
-  <h3>Your posts</h3>
+  <h3>Posts</h3>
   {{#each data.posts as |post|}}
     {{#with post}}
       {{>post}}
@@ -10,7 +10,7 @@
   {{/if}}
   <a type='click' class='btn btn-secondary my-4 mb-5' href='/newPost'>Write a new post</a>
   {{#if data.comments}}
-  <h3>Your comments</h3>
+  <h3>Comments</h3>
   {{#each data.comments as |comment|}}
     <div data-post-id='{{comment.post.id}}' class='container card col-7 m-1 post-card'>
       <div
