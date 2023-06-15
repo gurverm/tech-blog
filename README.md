@@ -12,7 +12,7 @@ This application is created through handlebars.js, express.js, mysql, and node.j
 4. [Questions](#questions)
 
 ## Installation
-Visit the deployed application: 
+Visit the deployed application: https://morning-everglades-75624-85e27c27b724.herokuapp.com/ 
 
 If you want to run it locally clone this repository. Then sign into mysql through the terminal and run 'source db/schema.db', to create the database. Next run 'npm install'. Lastly, run 'npm start' to get the application running on your localhost browser.
 Now that the application is ready to go, create an account and happy blogging!
