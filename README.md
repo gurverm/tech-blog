@@ -3,14 +3,13 @@
 
 ## Description
 A place CSM-style blog site where users can write about tech to share open for others to comment on.
+This application is created through handlebars.js, express.js, mysql, and node.js
 
 ## Table of Contents
 1. [Installation](#installation)
 2. [Usage](#usage)
-3. [Contributions](#contributions)
-4. [Tests](#tests)
-5. [License](#license)
-6. [Questions](#questions)
+3. [License](#license)
+4. [Questions](#questions)
 
 ## Installation
 Visit the deployed application: 
