@@ -32,7 +32,9 @@ userRouter.post("/", async (req, res) => {
         password: req.body.password,
         email: req.body.email,
       },
+      
     });
+    // console.log(User.username);
     if (!exists) {
       res.status(409).json({ message: "This user already exists." });
       return;
