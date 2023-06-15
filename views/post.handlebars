@@ -2,8 +2,8 @@
 <div class="d-flex flex-column align-items-center container">
   {{#if postOwner}}
     <div class="d-flex justify-content-around col-6" id="edit-btn-group">
-      <button class="btn btn-secondary" id="edit-post-btn">Edit this post</button>
-      <button class="btn btn-secondary" id="delete-post-btn">Delete this post</button>
+      <button class="btn btn-secondary" id="edit-post-btn">Edit post</button>
+      <button class="btn btn-secondary" id="delete-post-btn">Delete post</button>
     </div>
   {{/if}}
   <div
@@ -40,7 +40,7 @@
             required
           ></textarea>
         </div>
-        <button type="submit" class="btn btn-secondary my-2">Republish post</button>
+        <button type="submit" class="btn btn-secondary my-2">Reupload post</button>
       </form>
       <div
         id="comments-container"
@@ -78,7 +78,7 @@
               required
             ></textarea>
           </div>
-          <button type="submit" class="btn btn-secondary my-2">Publish comment</button>
+          <button type="submit" class="btn btn-secondary my-2">Post comment</button>
         </form>
       </div>
     </div>
